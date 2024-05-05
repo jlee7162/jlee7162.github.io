@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1" />
+  <title>Insert title here</title>
+  <link rel="stylesheet" type="text/css" href="indexlogin.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  
+ 
+</head>
+<body>
+   <section class="header">
+      <div class="thick-purple-line">
+        <h4>JoesStocks</h4>
+        <nav>
+          <div class="nav-links" id="navLinks">
+            <div class="nav-item">
+              <a href="indexlogin.html"> Home/Search </a>
+            </div>
+            <div class="nav-item">
+              <a href="portfolio.html"> Portfolio </a>
+            </div>
+            <div class="nav-item">
+              <a href="login.html"> Logout </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section class="search-section" >
+     <div id="searchForm">
+      <h2>SEARCH STOCKS</h2>
+      <form action="ValidationServlet" method="GET" class="search-form" id="form">
+        <input
+          type="text"
+          id="ticker"
+          name="ticker"
+          required
+          placeholder="Search by ticker..."
+        />
+        <button type="button" id="searchButton" onclick="loadDoc()">
+          <img
+            src="images.png"
+            alt="Search symbol"
+            style="width: 25px; height: 25px"
+          />
+        </button>
+      </form>
+      </div>
+        <div id="stockDetails" class="stock-details"></div>
+    </section>
+
+  <script src="index.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>

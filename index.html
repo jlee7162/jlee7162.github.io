@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Insert title here</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div class="thick-purple-line">
+        <h4>JoesStocks</h4>
+        <nav>
+          <div class="nav-links" id="navLinks">
+            <div class="nav-item">
+              <a href="index.html"> Home/Search </a>
+            </div>
+            <div class="nav-item">
+              <a href="login.html"> Login/Sign Up </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section class="search-section">
+      <div id="stockDetails"></div>
+      <h2>SEARCH STOCKS</h2>
+      <form action="ValidationServlet" method="GET" class="search-form">
+        <input
+          type="text"
+          id="ticker"
+          name="ticker"
+          required
+          placeholder="Search by ticker..."
+        />
+        <button type="button" id="searchButton" onclick="loadDoc()">
+          <img
+            src="images.png"
+            alt="Search symbol"
+            style="width: 25px; height: 25px"
+          />
+        </button>
+      </form>
+    </section>
+    <script>
+    const searchButton = document.getElementById("searchButton");
+    const tickerInput = document.getElementById("ticker");
+
+    searchButton.addEventListener("click", loadDoc);
+
+    function loadDoc() {
+      const tickerSymbol = tickerInput.value;
+      const apiUrl = `https://finnhub.io/api/v1/quote?symbol=${tickerSymbol}&token=cnovds9r01qgia584msgcnovds9r01qgia584mt0`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(quoteData => {
+          const companyInfoUrl = `https://finnhub.io/api/v1/stock/profile2?symbol=${tickerSymbol}&token=cnovds9r01qgia584msgcnovds9r01qgia584mt0`;
+          return fetch(companyInfoUrl)
+            .then(response => response.json())
+            .then(companyData => {
+              const stockDetailsDiv = document.getElementById("stockDetails");
+              stockDetailsDiv.innerHTML = "";
+
+              const detailsHTML = `
+            	<div class="companyName">	
+              	<h3>${tickerSymbol}</h3>
+              	</div>
+              	<div class="company-header">
+                  <h3>${companyData.name}</h3>
+                   <p>${quoteData.symbol ? quoteData.symbol : ''} - ${companyData.exchange ? companyData.exchange : ''}</p>
+                </div>
+                <div class="summary">
+                <h3>Summary</h3>
+                <ul>
+                  <p>High Price: ${quoteData.h}</p>
+                  <p>Low Price: ${quoteData.l}</p>
+                  <p>Open Price: ${quoteData.o}</p>
+                  <p>Close Price: ${quoteData.pc}</p>
+                </ul>
+                <h3>Company Information</h3>
+               </div>
+               <div class="company-info">
+                
+                  <p><strong>IPO Date:</strong> ${companyData.ipo}</p>
+                  <p><strong>Market Cap:</strong> ${companyData.marketCapitalization}</p>
+                  <p><strong>Share Outstanding:</strong> ${companyData.shareOutstanding}</p>
+                  <p><strong>Website:</strong> <a href="${companyData.weburl}" target="_blank">${companyData.weburl}</a></p>
+                  <p><strong>Phone:</strong> ${companyData.phone}</li>
+                
+                </div>
+              `;
+
+              stockDetailsDiv.innerHTML = detailsHTML;
+            });
+        })
+        .catch(error => {
+          console.error("Error fetching stock data:", error);
+        });
+    }
+    </script>
+  </body>
+</html>

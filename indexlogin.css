@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+.header h4 {
+  position: relative;
+  top: 20px;
+  color: white;
+  left: 20px;
+  margin-top: 0px;
+}
+
+.thick-purple-line {
+  background-color: #8080ff;
+  padding: 10px;
+  height: 50px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.search-section {
+  position: relative;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.search-section h2 {
+  position: relative;
+  top: -20px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #9370DB;
+  border-radius: 5px;
+  font-size: 12px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.stock-details {
+  display: flex;
+  margin-top: 50px;
+}
+
+.left-section {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  margin-top: -150px;
+  margin-left: 50px;
+  line-height: 0.5;
+}
+
+.quantity-section input[type="text"] {
+  width: 20px;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.quantity-section button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.middle-market {
+  margin-bottom: 20px;
+  font-weight: normal;
+  margin-left: 50px;
+  text-align:left;
+}
+
+.price-details {
+  margin-right: 400px;
+  margin-top: 100px;
+}
+.date{
+	font-size: 12px;
+}

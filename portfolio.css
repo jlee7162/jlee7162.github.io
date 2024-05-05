@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+.header h4{
+	position: relative;
+	top:50px;
+	color:white;
+	left: 20px;
+	margin-top:0px;
+}
+.thick-purple-line {
+	background-color: #8080ff; /* Purple color */
+    padding: 10px; /* Adjust padding as needed */
+    height:70px;
+    margin-top:0px;
+} 
+.nav-item {
+    display: inline-block; /*horizonally*/ 
+    margin-top: -100px;
+     
+}
+.nav-item a {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: white;
+    margin-top: -120px;
+    text-align: right;
+    text-decoration: none;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header .balance {
+  position: relative;
+  font-size:20px;
+  margin-top: 40px;
+  left: 300px;
+  line-height: 0.5;
+}
+
+.stockPortfolio{
+	position: relative;
+	top: 150px;
+	left: 300px;
+}
+
+.stockPortfolio2 {
+ position:relative;
+  top: 50px;
+  left: 0px;
+}
+
+.stockPortfolio3 {
+ position:relative;
+  top: 150px;
+  left: 0px;
+}

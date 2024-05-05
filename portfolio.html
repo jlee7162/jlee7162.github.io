@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+<body>
+    <section class="header">
+        <div class="thick-purple-line">
+            <h4>JoesStocks</h4>
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <div class="nav-item">
+                        <a href="indexlogin.html">Home / Search</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="login.html">Logout</a>
+                    </div>
+                </div>
+                <div class="balance" id="balance">
+					  <h3>My Portfolio:</h3>
+					  <div class="balance1">
+					    <h3>Cash Balance: $<span id="cashBalance1">50000.00</span></h3>
+					  </div>
+					  <div class="totalAccount">
+					    <h3>Total Account Value: $<span id="totalAccountValue1">50000.00</span></h3>
+					  </div>
+					</div>
+            </nav>
+        </div>
+    </section>
+    <div id="content">
+    <!-- HAVE TO ACCESS THE PORTFOLIO FROM MYSQL HERE -->
+    <div class="stockPortfolio">
+    <div style="width: 800px; border: 1px solid #ccc;">
+  <table style="border-collapse: collapse; width: 100%;">
+  <tr style="background-color: #f0f0f0;">
+    <th style="padding: 10px; text-align: left; border: 1px solid #ccc;">APPL - Apple Inc</th>
+  </tr>
+  <tr style="background-color: #FFFFFF;">
+    <td style="padding: 10px; border: 1px solid #ccc;">
+      <table style="width: 100%;">
+        <tr>
+          <td style="width: 50%;"><strong>Quantity: </strong>   6</td>
+          <td style="width: 50%;"><strong>Change:</strong> <span style="color:green">&#8593;2.12</span></td>
+        </tr>
+        <tr>
+          <td><strong>Avg. Cost/Share:</strong> 169.02</td>
+          <td><strong>Current Price:</strong> 169.02</td>
+        </tr>
+        <tr>
+          <td><strong>Total Cost:</strong>   507.06</td>
+          <td><strong>Market Value:</strong>   507.06</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</div>
+<table style="width: 100%;">
+<div class="portfolio-group" style="background-color: #f0f0f0; text-align: center;"> 
+
+ <form class="portfolio-form">
+
+      <div class="form-group">
+        <label for="portfolioQuan">Quantity:</label>
+        <input type="number" id="portfolioQuan" name="portfolioQuan" min="1" required style=width:30px;>
+      	</div>
+      <div class="form-group">
+        <label>
+          <input type="radio" name="action" value="buy" checked> Buy
+        </label>
+        <label>
+          <input type="radio" name="action" value="sell"> Sell
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    
+    </div>
+</table>
+</table>
+</div>
+
+ <div class="stockPortfolio2">
+    <div style="width: 800px; border: 1px solid #ccc;">
+  <table style="border-collapse: collapse; width: 100%;">
+  <tr style="background-color: #f0f0f0;">
+    <th style="padding: 10px; text-align: left; border: 1px solid #ccc;">TSLA - Tesla Inc</th>
+  </tr>
+  <tr style="background-color: #FFFFFF;">
+    <td style="padding: 10px; border: 1px solid #ccc;">
+      <table style="width: 100%;">
+        <tr>
+          <td style="width: 50%;"><strong>Quantity: </strong>   3</td>
+          <td style="width: 50%;"><strong>Change:</strong> <span style="color:green">&#8593;17.45</span></td>
+        </tr>
+        <tr>
+          <td><strong>Avg. Cost/Share:</strong> 162.13</td>
+          <td><strong>Current Price:</strong> 162.13</td>
+        </tr>
+        <tr>
+          <td><strong>Total Cost:</strong>   486.39</td>
+          <td><strong>Market Value:</strong>   486.39</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+<table style="width: 100%;">
+<div class="portfolio-group2" style="background-color: #f0f0f0; text-align: center;"> 
+
+ <form class="portfolio-form2">
+
+      <div class="form-group2">
+        <label for="portfolioQuan">Quantity:</label>
+        <input type="number" id="portfolioQuan2" name="portfolioQuan2" min="1" required style=width:30px;>
+      	</div>
+      <div class="form-group2">
+        <label>
+          <input type="radio" name="action" value="buy" checked> Buy
+        </label>
+        <label>
+          <input type="radio" name="action" value="sell"> Sell
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    
+    </div>
+</table>
+</table>
+</div>
+</div>
+
+<div class="stockPortfolio3">
+    <div style="width: 800px; border: 1px solid #ccc;">
+  <table style="border-collapse: collapse; width: 100%;">
+  <tr style="background-color: #f0f0f0;">
+    <th style="padding: 10px; text-align: left; border: 1px solid #ccc;">NVDA - NVIDIA Corp</th>
+  </tr>
+  <tr style="background-color: #FFFFFF;">
+    <td style="padding: 10px; border: 1px solid #ccc;">
+      <table style="width: 100%;">
+        <tr>
+          <td style="width: 50%;"><strong>Quantity: </strong>   3</td>
+          <td style="width: 50%;"><strong>Change:</strong> <span style="color:red">&#8595;-27.46</span></td>
+        </tr>
+        <tr>
+          <td><strong>Avg. Cost/Share:</strong> 796.77</td>
+          <td><strong>Current Price:</strong> 796.77</td>
+        </tr>
+        <tr>
+          <td><strong>Total Cost:</strong>   2390.31</td>
+          <td><strong>Market Value:</strong>   2390.31</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+<table style="width: 100%;">
+<div class="portfolio-group3" style="background-color: #f0f0f0; text-align: center;"> 
+
+ <form class="portfolio-form3">
+
+      <div class="form-group3">
+        <label for="portfolioQuan">Quantity:</label>
+        <input type="number" id="portfolioQuan3" name="portfolioQuan3" min="1" required style=width:30px;>
+      	</div>
+      <div class="form-group3">
+        <label>
+          <input type="radio" name="action" value="buy" checked> Buy
+        </label>
+        <label>
+          <input type="radio" name="action" value="sell"> Sell
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    
+    </div>
+</table>
+</table>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+<script>
+var hideContent = localStorage.getItem('hideContent');
+// or
+// var hideContent = sessionStorage.getItem('hideContent');
+
+ if (hideContent == 'true') {
+  document.getElementById('content').classList.add('hidden');
+}
+const form = document.querySelector('.portfolio-form');
+const form2 = document.querySelector('.portfolio-form2');
+const form3 = document.querySelector('portfolio-form3');
+const balanceElement = document.getElementById('balance');
+const totalAccountValueElement = document.getElementById('totalAccountValue1');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const ticker = 'AAPL';
+  let balance = 50000;
+  let totalAccountValue = 50000;
+  const inputValue = parseInt(document.getElementById('portfolioQuan').value);
+  const action = document.querySelector('input[name="action"]:checked').value;
+  const price = 165.26;
+  const total = price * inputValue;
+
+  if (inputValue == null || (action === 'buy' && balance < total)) {
+    alert('FAILED: Purchase not possible');
+  } else {
+    if (action == 'buy') {
+      balance -= total;
+      totalAccountValue += total;
+      alert(`Bought ${inputValue} ${ticker} stock(s)`);
+    } else {
+      balance += total;
+      totalAccountValue -= total;
+
+      alert(`Sold ${inputValue} ${ticker} stock(s)`);
+    }
+    //updateBalanceDisplay() ;
+  }
+});
+
+form2.addEventListener('submit', (event) => {
+	  event.preventDefault();
+
+	  const ticker = 'TSLA';
+	  let balance = 50000;
+	  let totalAccountValue = 50000;
+	  const inputValue = parseInt(document.getElementById('portfolioQuan2').value);
+	  const action = document.querySelector('input[name="action"]:checked').value;
+	  const price = 165.26;
+	  const total = price * inputValue;
+
+	  if (inputValue == null || (action === 'buy' && balance < total)) {
+	    alert('FAILED: Purchase not possible');
+	  } else {
+	    if (action === 'buy') {
+	      balance -= total;
+	      totalAccountValue += total;
+
+	      alert(`Bought ${inputValue} ${ticker} stock(s)`);
+	    } else {
+	      balance += total;
+	      totalAccountValue -= total;
+
+	      alert(`Sold ${inputValue} ${ticker} stock(s)`);
+	    }
+	    updateBalanceDisplay() ;
+	  }
+	}
+);
+
+form3.addEventListener('submit', (event) => {
+	  event.preventDefault();
+
+	  const ticker = 'NVDA';
+	  let balance = 50000;
+	  let totalAccountValue = 50000;
+	  const inputValue = parseInt(document.getElementById('portfolioQuan3').value);
+	  const action = document.querySelector('input[name="action"]:checked').value;
+	  const price = 165.26;
+	  const total = price * inputValue;
+
+	  if (inputValue == null || (action === 'buy' && balance < total)) {
+	    alert('FAILED: Purchase not possible');
+	  } else {
+	    if (action === 'buy') {
+	      balance -= total;
+	      totalAccountValue += total;
+	      alert(`Bought ${inputValue} ${ticker} stock(s)`);
+	    } else {
+	      balance += total;
+	      totalAccountValue -= total;
+	      alert(`Sold ${inputValue} ${ticker} stock(s)`);
+	    }
+	    updateBalanceDisplay() ;
+	  }
+	}
+);
+
+function updateBalanceDisplay() {
+    //balanceElement.textContent = cashBalance.toFixed(2);
+    balanceElement.innerHTML = `<h3>Cash Balance: $${balance.toFixed(2)}</h3>`;
+    totalAccountValueElement.innerHTML = `<h3>Cash Balance: $${totalAccountValue.toFixed(2)}</h3>`;
+  }
+</script>
+</body>
+</html>

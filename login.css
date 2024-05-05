@@ -1,0 +1,95 @@
+@charset "ISO-8859-1";
+.header h4{
+	position: relative;
+	top:50px;
+	color:white;
+	left: 20px;
+	margin-top:0px;
+}
+.thick-purple-line {
+	background-color: #8080ff; /* Purple color */
+    padding: 10px; /* Adjust padding as needed */
+    height:70px;
+    margin-top:0px;
+} 
+.nav-item {
+    display: inline-block; /*horizonally*/ 
+    margin-top: -100px;
+     
+}
+.nav-item a {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: white;
+    margin-top: -120px;
+    text-align: right;
+    text-decoration: none;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.login-register {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position:relative;
+  left: 300px;
+  width: 300px;
+}
+.container h2{
+	font-size: 15px;
+	font-weight:normal;
+}
+.form-container {
+   position: relative; /* Ensure relative positioning */
+   left: 700px; /* Move the signup section 20 pixels to the right */
+   bottom:210px;
+   width: 300px;
+}
+.form-container h3{
+	font-size: 15px;
+	font-weight:normal;
+}
+
+.form-group label {
+    display: block; /* Display the label as a block-level element */
+    margin-bottom: 10px; /* Add some space below the label */
+    font-size:12px;
+  }
+
+ 
+  .form-group input {
+    width: 100%; /* Make the input field take up the full width */
+    padding: 5px; /* Add padding for better appearance */
+    border: 1.5px solid #000000; /* Add border for better visibility */
+    border-radius: 4px; /* Add rounded corners */
+  }
+  
+  .login-form button {
+  	width: 100%;
+    margin-top: 10px; /* Add some space above the button */
+    padding: 5px;
+    border-radius:4px;
+    border: 1px solid #000000;
+    background-color: #800000; /* Set the background color of the button */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .register-form button {
+  	width: 100%;
+    margin-top: 10px; /* Add some space above the button */
+    padding: 5px;
+    border-radius:4px;
+    border: 1px solid #000000;
+     background-color: #800000; /* Set the background color of the button */
+    color: white;
+    cursor: pointer;
+  }
+

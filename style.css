@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.middle-market{
+	position:relative;
+	left: 0px;
+	text-align:center;
+	white-space: nowrap;
+	font-weight:normal;
+}
+
+.middle-stuff{
+	position:fixed;
+	white-space:nonwrap;
+	left:400px;
+}
+.hr{
+padding: 50px 0;
+  border: none;
+}
+
+.price-details {
+	position:relative;
+	text-align:left;
+	left:250px;
+	white-space: nowrap;
+	line-height:0.5;
+	bottom: 80px;
+}
+.company-info{
+	left:100px;
+	text-align:left;
+	position: absolute;
+  	bottom: -400px;
+}
+
+
+ 
+.stock-details .right-section {
+  position: relative;
+  top: -100px;
+  right: -400px;
+  text-align: right;
+  font-size: 20px;
+   font-weight: 700;
+   line-height: 0.5;
+}
+.fa-caret-up {
+  color: green;
+}
+
+.fa-caret-down {
+  color: red;
+}
+/*
+.stockNum{
+	font-weight: 90px;
+
+}*/
+
+.date{
+	font-size:20px;
+}
